@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:05:56 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/08/16 09:30:08 by hotph            ###   ########.fr       */
+/*   Updated: 2023/08/25 18:34:59 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ char	*ft_strdup(const char *s)
 {
 	char	*dest;
 
-	errno = 0;
-	dest = malloc((sizeof(char) * ft_strlen(s)) + 1);
-	if (dest == NULL)
+	if (s == NULL)
 		return (NULL);
-	ft_strcpy(dest, s);
-	return (dest);
+	return (ft_substr(s, 0, ft_strlen(s)));
 }
 
 // int main()

@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:05:32 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/08/18 17:39:23 by hotph            ###   ########.fr       */
+/*   Updated: 2023/08/25 18:37:53 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,7 @@ char	*ft_strchr(const char *s, int c)
 
 	if (s == NULL)
 		return (NULL);
-	cc = (char) c;
-	while (*s)
-	{
-		if (*s == cc)
-			return ((char *) s);
-		s += 1;
-	}
-	if (cc == '\0')
-		return ((char *) s);
-	return (NULL);
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
 }
 
 // int main(void)

@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:16:19 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/08/18 18:59:05 by hotph            ###   ########.fr       */
+/*   Updated: 2023/08/25 18:44:00 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*delete;
 
 	if (lst == NULL || *lst == NULL || del == NULL)
-	{
-		ft_putendl_fd("nothing to clear: ft_lstclear", STDERR_FILENO);
 		return ;
-	}
 	delete = *lst;
 	while (delete != NULL)
 	{
