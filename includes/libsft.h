@@ -6,32 +6,36 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:36:54 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/08/16 09:25:40 by hotph            ###   ########.fr       */
+/*   Updated: 2023/08/25 16:42:41 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBSFT_H
 # define LIBSFT_H
 
-//include header for function
-# include <stddef.h> //for size_t
-# include <stdlib.h> // formalloc
-# include <errno.h> // for malloc
-# include <fcntl.h> // for open
-# include <unistd.h> // for read & close 
-# include <limits.h> //for int max & min
+/*-------include header-------*/
+# include <stddef.h>
+# include <stdlib.h>
+# include <errno.h>
+# include <fcntl.h>
+# include <unistd.h> 
+# include <limits.h>
+# include "libsft_utils.h"
 
-//typdef
+/*-------define-------*/
+
+
+/*-------typedef-------*/
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
 
-//prototype
+/*-------prototype-------*/
 int		ft_atoi(const char *src);
 void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
