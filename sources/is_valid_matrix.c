@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   is_valid_matrix.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 18:06:34 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/10 18:33:37 by hotph            ###   ########.fr       */
+/*   Created: 2023/09/10 18:17:43 by hotph             #+#    #+#             */
+/*   Updated: 2023/09/10 18:18:50 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libsft.h"
+#include "libsft_utils.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+bool	is_valid_matrix(int num_of_row, char *matrix[], void *f(char *))
 {
-	size_t	len_d;
-	size_t	len_s;
+	int	i;
 
-	len_s = ft_strlen(src);
-	if (dest == NULL)
-		return (size + len_s);
-	len_d = ft_strlen(dest);
-	if (size <= len_d)
-		return (size + len_s);
-	while (*dest)
-		dest++;
-	while (size - len_d - 1)
+	i = 1;
+	while (i < num_of_row)
 	{
-		*dest++ = *src++;
-		size--;
-		if (*src == '\0')
-			break ;
+		if ((f)(matrix[i]) != 0)
+			return (false);
+		i++;
 	}
-	*dest = '\0';
-	return (len_d + len_s);
+	return (true);
 }

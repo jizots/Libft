@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   free_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 18:06:34 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/10 18:33:37 by hotph            ###   ########.fr       */
+/*   Created: 2023/09/10 17:51:11 by hotph             #+#    #+#             */
+/*   Updated: 2023/09/10 17:57:04 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libsft.h"
+#include "libsft_utils.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+/*Free map.*/
+void	free_map(void **map, size_t size_row)
 {
-	size_t	len_d;
-	size_t	len_s;
+	size_t	i;
 
-	len_s = ft_strlen(src);
-	if (dest == NULL)
-		return (size + len_s);
-	len_d = ft_strlen(dest);
-	if (size <= len_d)
-		return (size + len_s);
-	while (*dest)
-		dest++;
-	while (size - len_d - 1)
+	i = 0;
+	while (i < size_row)
 	{
-		*dest++ = *src++;
-		size--;
-		if (*src == '\0')
-			break ;
+		free(map[i]);
+		i++;
 	}
-	*dest = '\0';
-	return (len_d + len_s);
+	free(map);
 }
