@@ -6,13 +6,14 @@
 #    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/10 18:51:01 by hotph            ###   ########.fr        #
+#    Updated: 2023/09/11 11:10:45 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 CC 		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	+=	-I./includes
 
 SCRS	=	ft_memchr.c	ft_strcpy.c ft_strtrim.c ft_memcmp.c ft_strdup.c ft_atoi.c\
 			ft_memcpy.c ft_striteri.c ft_substr.c ft_bzero.c ft_memmove.c ft_strjoin.c\
@@ -26,29 +27,45 @@ BSCRS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
 EXSCRS	=	count_word.c free_map_null_terminated.c free_map.c free_null.c\
-			num_digit.c split_multichar.c
+			num_digit.c split_multichar.c\
 
 SCRS_DIR	=	./srcs/
-OBJS_DIR	= 	objs/
-OBJS = ${addprefix ${OBJS_DIR}, ${SRCS:%.c=%.o}}
-BOBJS = ${addprefix ${BOBJS_DIR}, ${BSRCS:%.c=%.o}}
-EXOBJS = ${addprefix ${EXOBJS_DIR}, ${EXSRCS:%.c=%.o}}
+OBJS_DIR	= 	./objs/
+
+ifdef WITH_BONUS
+	SRCS += ${BSRCS}
+endif
+
+ifdef WITH_EX
+	SRCS += ${BSRCS}
+	SRCS += ${EXSCRS}
+endif
+
+OBJS = ${addprefix ${OBJS_DIR}, ${SCRS:%.c=%.o}}
 
 all:	${OBJS_DIR} $(NAME)
 
 ${OBJS_DIR}:
 	mkdir -p ${OBJS_DIR}
 
+${OBJS_DIR}%.o: ${SCRS_DIR}%.c
+	${CC} ${CFLAGS} -c $< -o $@
+
 $(NAME):	$(OBJS)
 	ar rcs $@ $^
 
-bonus:	$(OBJS) $(BOBJS) $(EXOBJS)
-	ar rcs $(NAME) $^
+bonus:
+	${MAKE} WITH_BONUS=1 all
+
+ex:
+	${MAKE} clean
+	${MAKE} WITH_EX=1 all
 
 clean:
 	rm -f $(OBJS) $(BOBJS) $(EXOBJS)
 
 fclean:	clean
 	rm -f $(NAME)
+	rmdir ${OBJS_DIR} 2>/dev/null || true
 
 re: fclean all

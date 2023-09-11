@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/10 18:09:37 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/11 11:20:06 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,15 @@ Return map of splited string. Splited by char(can multiple select).
 ex. ft_split_multichar("abc de,f", " ,") -> {"abc", "de", "f", NULL}
 */
 char	**ft_split_multichar(const char *s, const char *multichar);
+/*Free pointer and set null.*/
+void	free_null(void **ptr);
+/*
+Free matrix type char**. Require size of row.
+Free each row and matrix.
+*/
 void	free_map(void **map, size_t size_row);
 void	free_map_null_terminated(void **map);
+size_t	count_word(const char *str);
+bool	is_valid_matrix(int num_of_row, char *matrix[], void *f(char *));
 
 #endif
