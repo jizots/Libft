@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:36:54 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/10 18:32:08 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/11 13:58:02 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 # include <stdlib.h>
 # include <errno.h>
 # include <fcntl.h>
-# include <unistd.h> 
+# include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
 # include "libsft_utils.h"
 
 /*-------define-------*/
-
 
 /*-------typedef-------*/
 typedef struct s_list

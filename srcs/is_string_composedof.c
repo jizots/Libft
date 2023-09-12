@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   num_digit.c                                        :+:      :+:    :+:   */
+/*   is_string_composedof.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 18:17:44 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/11 13:58:33 by hotph            ###   ########.fr       */
+/*   Created: 2023/09/12 19:25:33 by hotph             #+#    #+#             */
+/*   Updated: 2023/09/12 19:29:26 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libsft_utils.h"
 
-int	num_digit_int(int num)
+bool	is_string_composedof(const char *str, const char *charset)
 {
-	int		count;
-	int64_t	n;
+	int	i;
 
-	count = 0;
-	if (num == 0)
-		return (1);
-	n = (int64_t)num;
-	if (num < 0)
+	i = 0;
+	if (str == NULL || charset == NULL)
+		return (false);
+	while (str[i])
 	{
-		count++;
-		n = -n;
+		if (ft_strchr(charset, str[i]) == NULL)
+			return (false);
+		i++;
 	}
-	while (n)
-	{
-		count++;
-		n = n / 10;
-	}
-	return (count);
+	return (true);
 }
