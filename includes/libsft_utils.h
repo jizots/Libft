@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/12 19:29:57 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/12 19:51:03 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	free_map_null_terminated(void **map);
 size_t	count_word(const char *str);
 bool	is_valid_matrix(int num_of_row, char *matrix[], void *f(char *));
 bool	is_string_composedof(const char *str, const char *charset);
+char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
 
 /*math*/
 int		power_num(int num, int exponents);

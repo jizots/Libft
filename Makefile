@@ -6,7 +6,7 @@
 #    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/11 11:10:45 by hotph            ###   ########.fr        #
+#    Updated: 2023/09/12 19:57:01 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,12 @@ SCRS	=	ft_memchr.c	ft_strcpy.c ft_strtrim.c ft_memcmp.c ft_strdup.c ft_atoi.c\
 BSCRS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
-EXSCRS	=	count_word.c free_map_null_terminated.c free_map.c free_null.c\
-			num_digit.c split_multichar.c\
+EXSCRS	=	base_to_newbase.c count_word.c\
+			free_map_null_terminated.c free_map.c free_null.c\
+			num_digit.c get_first_line.c\
+			get_distance.c get_radian.c power_num.c\
+			is_oddnum.c is_space3.c is_string_composedof.c is_valid_matrix.c\
+			split_multichar.c\
 
 SCRS_DIR	=	./srcs/
 OBJS_DIR	= 	./objs/
