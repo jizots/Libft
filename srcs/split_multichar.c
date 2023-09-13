@@ -6,13 +6,13 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:04:53 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/10 17:17:43 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/13 14:30:38 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libsft_utils.h"
 
-static char	*ft_strtrim_forward(char const *s1, char const *multichar)
+static char	*strtrim_forward(char const *s1, char const *multichar)
 {
 	char	*start;
 	char	*end;
@@ -62,7 +62,7 @@ static size_t	num_of_split(const char *s, const char *multichar)
 	return (size_split);
 }
 
-static char	*ft_next_str(const char *s, const char *multichar)
+static char	*next_str(const char *s, const char *multichar)
 {
 	char	*next;
 	size_t	i;
@@ -90,21 +90,19 @@ static char	**ft_setsplit(const char *s,
 	start = (char *) s;
 	while (i < size_split)
 	{
-		box[i] = ft_strtrim_forward(start, multichar);
+		box[i] = strtrim_forward(start, multichar);
 		if (box[i] == NULL)
 		{
-			while (i >= 0)
-				free(box[i--]);
-			free(box);
+			free_map((void **) box, i);
 			return (NULL);
 		}
 		i++;
-		start = ft_next_str(start, multichar);
+		start = next_str(start, multichar);
 	}
 	return (box);
 }
 
-char	**ft_split_multichar(const char *s, const char *multichar)
+char	**split_multichar(const char *s, const char *multichar)
 {
 	char	**box;
 	size_t	size_split;

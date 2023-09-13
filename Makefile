@@ -6,7 +6,7 @@
 #    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/12 19:57:01 by hotph            ###   ########.fr        #
+#    Updated: 2023/09/13 14:04:13 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,16 +21,17 @@ SCRS	=	ft_memchr.c	ft_strcpy.c ft_strtrim.c ft_memcmp.c ft_strdup.c ft_atoi.c\
 			ft_putchar_fd.c ft_strlcpy.c ft_isalpha.c ft_putendl_fd.c ft_strlen.c\
 			ft_putnbr_fd.c ft_strmapi.c ft_isascii.c ft_putstr_fd.c ft_strncmp.c ft_isdigit.c\
 			ft_split.c ft_strnstr.c ft_isprint.c ft_strcat.c ft_strrchr.c ft_itoa.c ft_strchr.c\
-			ft_strstr.c 
+			ft_strstr.c\
 
 BSCRS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
 EXSCRS	=	base_to_newbase.c count_word.c\
 			free_map_null_terminated.c free_map.c free_null.c\
-			num_digit.c get_first_line.c\
-			get_distance.c get_radian.c power_num.c\
+			get_first_line.c\
+			get_distance.c get_radian.c\
 			is_oddnum.c is_space3.c is_string_composedof.c is_valid_matrix.c\
+			power_num.c num_digit.c\
 			split_multichar.c\
 
 SCRS_DIR	=	./srcs/
