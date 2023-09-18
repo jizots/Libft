@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/13 18:57:00 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:08:26 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,23 @@
 /*-------include header-------*/
 # include "libsft.h"
 # include <math.h>
+# include <stdbool.h>
+
+/*-------define-------*/
+
+/*-------typedef-------*/
+typedef struct s_point2d
+{
+	double	x;
+	double	y;
+}	t_point2d;
+
+typedef struct s_point3d
+{
+	double	x;
+	double	y;
+	double	z;
+}	t_point3d;
 
 /*-------prototype-------*/
 /*String*/
