@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
+#    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/13 19:46:18 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/19 13:12:40 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,12 @@ EXSRCS	=	base_to_newbase.c count_word.c\
 			free_map_null_terminated.c free_map.c free_null.c\
 			get_first_line.c\
 			get_distance.c get_radian.c\
-			is_oddnum.c is_space3.c is_string_composedof.c is_valid_matrix.c\
+			is_ignore_if.c\
+			is_oddnum.c is_space3.c\
+			is_string_composedof.c\
+			is_valid_matrix.c is_valid_string.c\
 			power_num.c num_digit.c\
+			putstr_reverse_fd.c\
 			split_multichar.c\
 
 SRCS_DIR	=	./srcs/
