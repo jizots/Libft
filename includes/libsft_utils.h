@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/18 15:08:26 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/20 11:55:06 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ ex. ft_split_multichar("abc de,f", " ,") -> {"abc", "de", "f", NULL}
 char	**split_multichar(const char *s, const char *multichar);
 /*@brife Count words splited with ispase3 charctors.*/
 size_t	count_word(const char *str);
+size_t	count_row_of_matrix(char **matrix);
 /*@brife Verify string is composed only charset charactors.*/
 bool	is_string_composedof(const char *str, const char *charset);
 

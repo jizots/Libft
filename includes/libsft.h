@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:36:54 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/18 15:08:20 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/20 12:15:04 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "libsft_utils.h"
 
 /*-------define-------*/
+#define WHITE_SPACE " \f\n\r\t\v"
 
 /*-------typedef-------*/
 typedef struct s_list
