@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_string_array.c                              :+:      :+:    :+:   */
+/*   add_string_to_array.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:11:40 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/20 15:34:38 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:43:14 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	**add_string_to_array(char *src_add, char **old_array)
 	char	**new_array;
 	int		size_alloc;
 
-	if (!src_add || is_string_composedof(src_add, WHITE_SPACE) == true)
-		return (NULL);
+	if (!src_add)
+		return (old_array);
 	size_alloc = count_row_of_matrix(old_array) + 2;
 	new_array = malloc(sizeof(char *) * size_alloc);
 	if (new_array == NULL)
