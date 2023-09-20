@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/20 14:10:51 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:41:02 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,27 +39,30 @@ typedef struct s_point3d
 
 /*-------prototype-------*/
 /*######## String ########*/
-/*@brife Put reverse stirng to specified file discriptor.*/
-void	putstr_reverse_fd(char *s, int fd);
+/*@brife Add string pointer to old_array of string(array must NULL terminated).*/
+char	**add_string_to_array(char *src_add, char **old_array);
+/*@brife Count words splited with ispase3 charctors.*/
+size_t	count_word(const char *str);
+/*@brife Count rows of matrix. Matrix must NULL terminated*/
+size_t	count_row_of_matrix(char **matrix);
+char	*get_first_line(int fd);
+/*if argument is space3, return true.*/
+bool	is_space3(const char c);
+/*@brief Return size of charactor of space, defined by isspace(3).*/
+size_t	len_isspace3(const char *src);
 /*
 @brief Return size of charactor of number(within int size).
 Ex. 123 -> 3, -123 -> 4, 0 -> 1
 */
 int		num_digit_int(int num);
-/*@brief Return size of charactor of space, defined by isspace(3).*/
-size_t	len_isspace3(const char *src);
-/*if argument is space3, return true.*/
-bool	is_space3(const char c);
+/*@brife Put reverse stirng to specified file discriptor.*/
+void	putstr_reverse_fd(char *s, int fd);
 /*@brief Coution: This function has read() function. libft dose not allow.*/
-char	*get_first_line(int fd);
 /*
 @brief Return map of splited string. Splited by char(can multiple select).
 ex. ft_split_multichar("abc de,f", " ,") -> {"abc", "de", "f", NULL}
 */
 char	**split_multichar(const char *s, const char *multichar);
-/*@brife Count words splited with ispase3 charctors.*/
-size_t	count_word(const char *str);
-size_t	count_row_of_matrix(char **matrix);
 /*@brife Verify string is composed only charset charactors.*/
 bool	is_string_composedof(const char *str, const char *charset);
 

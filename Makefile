@@ -6,7 +6,7 @@
 #    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/20 14:57:58 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/20 15:41:53 by sotanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ SRCS	=	ft_memchr.c	ft_strcpy.c ft_strtrim.c ft_memcmp.c ft_strdup.c ft_atoi.c\
 BSRCS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
-EXSRCS	=	base_to_newbase.c\
+EXSRCS	=	add_string_to_array.c\
+			base_to_newbase.c\
 			count_row_of_matrix.c\
 			count_word.c\
 			create_trgb_color.c\
