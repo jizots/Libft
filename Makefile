@@ -6,7 +6,7 @@
 #    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/20 12:16:21 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/20 14:57:58 by sotanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ BSRCS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 EXSRCS	=	base_to_newbase.c\
 			count_row_of_matrix.c\
 			count_word.c\
+			create_trgb_color.c\
 			free_map_null_terminated.c free_map.c free_null.c\
 			get_first_line.c\
 			get_distance.c get_radian.c\

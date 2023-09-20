@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/20 11:55:06 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:10:51 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct s_point3d
 }	t_point3d;
 
 /*-------prototype-------*/
-/*String*/
+/*######## String ########*/
 /*@brife Put reverse stirng to specified file discriptor.*/
 void	putstr_reverse_fd(char *s, int fd);
 /*
@@ -63,7 +63,7 @@ size_t	count_row_of_matrix(char **matrix);
 /*@brife Verify string is composed only charset charactors.*/
 bool	is_string_composedof(const char *str, const char *charset);
 
-/*Free*/
+/*######## Free ########*/
 /*@brief Free pointer and set null.*/
 void	free_null(void **ptr);
 /*
@@ -75,7 +75,7 @@ void	free_map_null_terminated(void **map);
 bool	is_valid_matrix(int num_of_row, char *matrix[], void *f(const char *));
 char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
 
-/*math*/
+/*######## Math ########*/
 /*@brife Calculate power exponents of num.*/
 /*@param num is base number. exponent is exponents.*/
 int		power_num(int num, int exponents);
@@ -89,5 +89,9 @@ Coution: This function has sqrt(). libft dose not allow.
 Variables name dose not have deep meaning.
 */
 double	hypotenus_of_pytgrs(double adjacent, double opposite);
+
+/*######## Color, texture ########*/
+int	create_trgb_color(unsigned char t, unsigned char r,
+					unsigned char g, unsigned char b);
 
 #endif
