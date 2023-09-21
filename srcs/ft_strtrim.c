@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:08:38 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/08/25 17:07:07 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/21 13:50:08 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libsft.h"
 
 #include "libsft.h"
 
