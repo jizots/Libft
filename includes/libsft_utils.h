@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/20 16:21:57 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/21 11:20:02 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	free_null(void **ptr);
 @brief Free each row and matrix.
 */
 void	free_map(void **map, size_t size_row);
-void	free_map_null_terminated(void **map);
+void	free_map_null_terminated(void ***map);
 bool	is_valid_matrix(int num_of_row, char *matrix[], bool (*f)(const char *));
 char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
 
