@@ -6,13 +6,13 @@
 #    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/22 15:27:12 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/22 16:37:59 by sotanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all bonus ex clean fclean re
 
-NAME	=	libft.a
+NAME	=	libsft.a
 CC 		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 CFLAGS	+=	-I./includes
