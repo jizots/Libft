@@ -6,7 +6,7 @@
 #    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/20 15:41:53 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/22 15:27:12 by sotanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ EXSRCS	=	add_string_to_array.c\
 			count_word.c\
 			create_trgb_color.c\
 			free_map_null_terminated.c free_map.c free_null.c\
+			ft_gnl.c\
 			get_first_line.c\
 			get_distance.c get_radian.c\
 			is_ignore_if.c\
