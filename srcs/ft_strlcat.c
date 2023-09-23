@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:06:34 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/10 18:33:37 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/23 17:12:10 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len_s;
 
 	len_s = ft_strlen(src);
-	if (dest == NULL)
+	if (dest == NULL || src == NULL)
 		return (size + len_s);
 	len_d = ft_strlen(dest);
 	if (size <= len_d)
