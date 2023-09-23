@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/21 11:20:02 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/23 14:40:49 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	**add_string_to_array(char *src_add, char **old_array);
 size_t	count_word(const char *str);
 /*@brife Count rows of matrix. Matrix must NULL terminated*/
 size_t	count_row_of_matrix(char **matrix);
+char	*ft_gnl(int fd);
 char	*get_first_line(int fd);
 /*if argument is space3, return true.*/
 bool	is_space3(const char c);

@@ -6,11 +6,11 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 18:55:46 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/22 15:25:22 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/23 14:46:41 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_gnl.h"
+#include "libsft_utils.h"
 
 char	*ft_free(char *s1, char *s2)
 {

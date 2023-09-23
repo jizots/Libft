@@ -7,3 +7,4 @@ c_cpp_propeties.json
 .vscode/c_cpp_properties.json
 *.o
 libft.a
+libsft.a
