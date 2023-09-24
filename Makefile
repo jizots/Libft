@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
+#    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/22 16:37:59 by sotanaka         ###   ########.fr        #
+#    Updated: 2023/09/24 11:06:37 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ EXSRCS	=	add_string_to_array.c\
 			count_row_of_matrix.c\
 			count_word.c\
 			create_trgb_color.c\
+			ends_with_str.c\
 			free_map_null_terminated.c free_map.c free_null.c\
 			ft_gnl.c\
 			get_first_line.c\

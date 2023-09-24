@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libsft_utils.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/23 14:40:49 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/09/24 11:04:40 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,25 @@ typedef struct s_point3d
 
 /*-------prototype-------*/
 /*######## String ########*/
-/*@brife Add string pointer to old_array of string(array must NULL terminated).*/
+/*@brife	Add string pointer to old_array of string(array must NULL terminated).*/
 char	**add_string_to_array(char *src_add, char **old_array);
-/*@brife Count words splited with ispase3 charctors.*/
+/*@brife	Count words splited with ispase3 charctors.*/
 size_t	count_word(const char *str);
-/*@brife Count rows of matrix. Matrix must NULL terminated*/
+/*@brife	Count rows of matrix. Matrix must NULL terminated*/
 size_t	count_row_of_matrix(char **matrix);
+/*@brife	Verify 'str' ends with 'end' string.*/
+bool	ends_with_str(const char *str, const char *end);
+/*@brife	Read line(terminated by \n or \0) from file discriptor.*/
+/*@return	char* of line alloced. If fail read or reach end of file, return NULL.*/
+/*@coution	Do not use when you don't need to read all line. It's cause memory leaks.*/
 char	*ft_gnl(int fd);
 char	*get_first_line(int fd);
 /*if argument is space3, return true.*/
 bool	is_space3(const char c);
-/*@brief Return size of charactor of space, defined by isspace(3).*/
+/*@brief	Return size of charactor of space, defined by isspace(3).*/
 size_t	len_isspace3(const char *src);
 /*
-@brief Return size of charactor of number(within int size).
+@brief	Return size of charactor of number(within int size).
 Ex. 123 -> 3, -123 -> 4, 0 -> 1
 */
 int		num_digit_int(int num);
