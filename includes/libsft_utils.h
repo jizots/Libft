@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/24 11:04:40 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/28 18:53:39 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ typedef struct s_point2d
 	double	y;
 }	t_point2d;
 
+typedef struct s_data2d
+{
+	t_point2d	p;
+	int			color;
+}	t_data2d;
+
 typedef struct s_point3d
 {
 	double	x;
@@ -41,10 +47,11 @@ typedef struct s_point3d
 /*######## String ########*/
 /*@brife	Add string pointer to old_array of string(array must NULL terminated).*/
 char	**add_string_to_array(char *src_add, char **old_array);
-/*@brife	Count words splited with ispase3 charctors.*/
-size_t	count_word(const char *str);
+char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
 /*@brife	Count rows of matrix. Matrix must NULL terminated*/
 size_t	count_row_of_matrix(char **matrix);
+/*@brife	Count words splited with ispase3 charctors.*/
+size_t	count_word(const char *str);
 /*@brife	Verify 'str' ends with 'end' string.*/
 bool	ends_with_str(const char *str, const char *end);
 /*@brife	Read line(terminated by \n or \0) from file discriptor.*/
@@ -62,7 +69,7 @@ Ex. 123 -> 3, -123 -> 4, 0 -> 1
 */
 int		num_digit_int(int num);
 /*@brife Put reverse stirng to specified file discriptor.*/
-void	putstr_reverse_fd(char *s, int fd);
+int		putstr_reverse_fd(char *s, int fd);
 /*@brief Coution: This function has read() function. libft dose not allow.*/
 /*
 @brief Return map of splited string. Splited by char(can multiple select).
@@ -71,18 +78,18 @@ ex. ft_split_multichar("abc de,f", " ,") -> {"abc", "de", "f", NULL}
 char	**split_multichar(const char *s, const char *multichar);
 /*@brife Verify string is composed only charset charactors.*/
 bool	is_string_composedof(const char *str, const char *charset);
+bool	is_valid_string(char *str, bool condition(char));
+bool	is_valid_matrix(int num_of_row, char *matrix[], bool (*f)(const char *));
 
 /*######## Free ########*/
-/*@brief Free pointer and set null.*/
-void	free_null(void **ptr);
 /*
 @brief Free matrix type char**. Require size of row.
 @brief Free each row and matrix.
 */
 void	free_map(void **map, size_t size_row);
 void	free_map_null_terminated(void ***map);
-bool	is_valid_matrix(int num_of_row, char *matrix[], bool (*f)(const char *));
-char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
+/*@brief Free pointer and set null.*/
+void	free_null(void **ptr);
 
 /*######## Math ########*/
 /*@brife Calculate power exponents of num.*/
@@ -98,6 +105,7 @@ Coution: This function has sqrt(). libft dose not allow.
 Variables name dose not have deep meaning.
 */
 double	hypotenus_of_pytgrs(double adjacent, double opposite);
+bool	is_oddnum(int num);
 
 /*######## Color, texture ########*/
 int	create_trgb_color(unsigned char t, unsigned char r,

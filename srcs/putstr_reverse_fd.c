@@ -6,13 +6,13 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 10:32:47 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/13 14:00:36 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/28 18:54:10 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libsft_utils.h"
 
-void	putstr_reverse_fd(char *s, int fd)
+int	putstr_reverse_fd(char *s, int fd)
 {
 	int	len;
 
@@ -22,10 +22,7 @@ void	putstr_reverse_fd(char *s, int fd)
 	while (len)
 	{
 		if (write (fd, &s[--len], 1) == -1)
-		{
-			write (STDERR_FILENO, "write error\n", 12);
-			return ;
-		}
+			return (-1);
 	}
 }
 

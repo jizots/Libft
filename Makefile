@@ -6,7 +6,7 @@
 #    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/24 11:06:37 by hotph            ###   ########.fr        #
+#    Updated: 2023/09/28 18:47:55 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,6 @@ EXSRCS	=	add_string_to_array.c\
 			ft_gnl.c\
 			get_first_line.c\
 			get_distance.c get_radian.c\
-			is_ignore_if.c\
 			is_oddnum.c is_space3.c\
 			is_string_composedof.c\
 			is_valid_matrix.c is_valid_string.c\
