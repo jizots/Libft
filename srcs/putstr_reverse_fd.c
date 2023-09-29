@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 10:32:47 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/29 09:35:40 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/29 09:48:25 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ int	putstr_reverse_fd(char *s, int fd)
 	int	len;
 
 	if (s == NULL)
-		return ;
+		return (0);
 	len = ft_strlen(s);
 	while (len)
 	{
 		if (write (fd, &s[--len], 1) == -1)
 			return (-1);
 	}
-	retur (0);
+	return (0);
 }
 
 // int main()
