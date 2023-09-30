@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/29 11:42:13 by hotph            ###   ########.fr       */
+/*   Updated: 2023/09/30 11:06:14 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ typedef struct s_point3d
 }	t_point3d;
 
 /*-------prototype-------*/
+/*########################*/
 /*######## String ########*/
+/*########################*/
 /*
  * @brif	Add string pointer to old_array of string(array must NULL terminated).
 */
@@ -93,7 +95,9 @@ bool	is_string_composedof(const char *str, const char *charset);
 bool	is_valid_string(char *str, bool condition(char));
 bool	is_valid_matrix(int num_of_row, char *matrix[], bool (*f)(const char *));
 
+/*######################*/
 /*######## Free ########*/
+/*######################*/
 /*
  * @brief Free matrix type char**. Require size of row.
  * @brief Free each row and matrix.
@@ -105,7 +109,10 @@ void	free_map_null_terminated(void ***map);
 */
 void	free_null(void **ptr);
 
+/*######################*/
 /*######## Math ########*/
+/*######################*/
+bool	almost_equal_double(double a, double b);
 /*
  * @brif Calculate power exponents of num.
  * @param num is base number. exponent is exponents.
@@ -115,17 +122,19 @@ double	get_radian(double theta);
 /*
  * @brief Coution: This function has sqrt(). libft dose not allow.
  * @brief Get distance of two points.
- * @param x1y1 Meaning, x-y coordinate of one point.
 */
-double	distance_of_point(double x1, double y1, double x2, double y2);
+double	distance_of_point(t_point2d p1, t_point2d p2);
 /*
 Coution: This function has sqrt(). libft dose not allow.
 Variables name dose not have deep meaning.
 */
 double	hypotenus_of_pytgrs(double adjacent, double opposite);
 bool	is_oddnum(int num);
+bool	is_big_double(double t, double f);
 
+/*################################*/
 /*######## Color, texture ########*/
+/*################################*/
 int	create_trgb_color(unsigned char t, unsigned char r,
 					unsigned char g, unsigned char b);
 

@@ -6,7 +6,7 @@
 #    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/28 18:47:55 by hotph            ###   ########.fr        #
+#    Updated: 2023/09/30 11:04:24 by hotph            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ BSRCS	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
 EXSRCS	=	add_string_to_array.c\
+			almost_equal.c\
 			base_to_newbase.c\
 			count_row_of_matrix.c\
 			count_word.c\
@@ -38,6 +39,7 @@ EXSRCS	=	add_string_to_array.c\
 			ft_gnl.c\
 			get_first_line.c\
 			get_distance.c get_radian.c\
+			is_big_double.c\
 			is_oddnum.c is_space3.c\
 			is_string_composedof.c\
 			is_valid_matrix.c is_valid_string.c\
