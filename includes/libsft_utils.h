@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libsft_utils.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/09/30 11:06:14 by hotph            ###   ########.fr       */
+/*   Updated: 2023/10/01 13:13:33 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,21 @@
 /*-------define-------*/
 
 /*-------typedef-------*/
-typedef struct s_point2d
+typedef struct s_point2df
 {
 	double	x;
 	double	y;
-}	t_point2d;
+}	t_point2df;
+
+typedef struct s_point2di
+{
+	int	x;
+	int	y;
+}	t_point2di;
 
 typedef struct s_data2d
 {
-	t_point2d	p;
+	t_point2df	p;
 	int			color;
 }	t_data2d;
 
@@ -123,7 +129,7 @@ double	get_radian(double theta);
  * @brief Coution: This function has sqrt(). libft dose not allow.
  * @brief Get distance of two points.
 */
-double	distance_of_point(t_point2d p1, t_point2d p2);
+double	distance_of_point(t_point2df p1, t_point2df p2);
 /*
 Coution: This function has sqrt(). libft dose not allow.
 Variables name dose not have deep meaning.
