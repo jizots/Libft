@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 13:59:27 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/10/01 14:10:37 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/10/01 14:29:50 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ bool	is_right_direction(double radian)
 
 bool	is_up_direction(double radian)
 {
-	if (0 < radian && radian < M_PI)
+	if (M_PI < radian && radian < M_PI * 2)
 		return (true);
 	return (false);
 }
