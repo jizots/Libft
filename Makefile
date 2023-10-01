@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
+#    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/09/30 11:04:24 by hotph            ###   ########.fr        #
+#    Updated: 2023/10/01 14:13:18 by sotanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ EXSRCS	=	add_string_to_array.c\
 			is_oddnum.c is_space3.c\
 			is_string_composedof.c\
 			is_valid_matrix.c is_valid_string.c\
+			is_which_direction.c\
 			power_num.c num_digit.c\
 			putstr_reverse_fd.c\
 			split_multichar.c\

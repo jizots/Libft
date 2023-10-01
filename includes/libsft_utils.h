@@ -6,7 +6,7 @@
 /*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/10/01 13:13:33 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/10/01 14:14:09 by sotanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,9 @@ Variables name dose not have deep meaning.
 double	hypotenus_of_pytgrs(double adjacent, double opposite);
 bool	is_oddnum(int num);
 bool	is_big_double(double t, double f);
+bool	is_right_direction(double radian);
+bool	is_up_direction(double radian);
+void	set_radian_within_2pi(double *radian);
 
 /*################################*/
 /*######## Color, texture ########*/
