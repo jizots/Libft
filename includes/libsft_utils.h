@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/10/02 10:47:20 by hotph            ###   ########.fr       */
+/*   Updated: 2023/10/02 18:50:19 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,10 @@ bool	ends_with_str(const char *str, const char *end);
  * @return	char* of line alloced. If fail read or reach end of file, return NULL.
 */
 char	*ft_gnl(int fd);
+/*
+ * @brief	Must update. This function is not good.
+ * @brief	If line has not '\n', return NULL. update \0 mode.
+*/
 char	*get_first_line(int fd);
 /*
  *@brief	if argument is space3, return true.
@@ -143,6 +147,10 @@ bool	almost_equal_double(double a, double b);
  * @param	num is base number. exponent is exponents.
 */
 int		power_num(int num, int exponents);
+/*
+ * @brief	Convert degree to radian.
+ * @brief	Ex. 90 degree -> 1.570796 radian
+*/
 double	get_radian(double theta);
 /*
  * @brief Coution: This function has sqrt(). libft dose not allow.
@@ -156,8 +164,21 @@ Variables name dose not have deep meaning.
 double	hypotenus_of_pytgrs(double adjacent, double opposite);
 bool	is_oddnum(int num);
 bool	is_big_double(double t, double f);
+/*
+ * @brief	Verify radian is within (0 to pi/2) && ((pi/2) * 3 to 2pi).
+ * @brief	Premise: radian is within 0 to 2pi. right direction is 0 radian.
+ * @brief	Premise: y_axis is down direction. x_axis is right direction.
+*/
 bool	is_right_direction(double radian);
+/*
+ * @brief	Verify radian is within (pi to 2pi).
+ * @brief	Premise: show 'is_right_direction'.
+*/
 bool	is_up_direction(double radian);
+/*
+ * @brief	Set radian within 0 to 2pi.
+ * @return	Nothing.
+*/
 void	set_radian_within_2pi(double *radian);
 
 /*################################*/
