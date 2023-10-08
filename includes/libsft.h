@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libsft.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:36:54 by sotanaka          #+#    #+#             */
-/*   Updated: 2023/09/20 12:15:04 by sotanaka         ###   ########.fr       */
+/*   Updated: 2023/10/08 11:44:49 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include "libsft_utils.h"
 
 /*-------define-------*/
-#define WHITE_SPACE " \f\n\r\t\v"
+# define WHITE_SPACE " \f\n\r\t\v"
 
 /*-------typedef-------*/
 typedef struct s_list

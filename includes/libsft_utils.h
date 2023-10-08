@@ -6,7 +6,7 @@
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 18:13:30 by hotph             #+#    #+#             */
-/*   Updated: 2023/10/02 18:50:19 by hotph            ###   ########.fr       */
+/*   Updated: 2023/10/08 11:49:05 by hotph            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdbool.h>
 
 /*-------define-------*/
-
 /*-------typedef-------*/
 typedef struct s_point2df
 {
@@ -64,7 +63,8 @@ char	**add_string_to_array(char *src_add, char **old_array);
  * @brief	newbase is base of return value.
  * @brief	ex. base_to_newbase("101", "01", "0123456789") -> "5"
  * @return	Converted string of number. 
- * @return	If fail(allocate, base duplicate, num does not consist of a base.), return NULL.
+ * @return	If fail(allocate, base duplicate, 
+ * @return	num does not consist of a base.), return NULL.
 */
 char	*base_to_newbase(char *num_oldbase, char *oldbase, char *newbase);
 /*
@@ -82,7 +82,8 @@ size_t	count_word(const char *str);
 bool	ends_with_str(const char *str, const char *end);
 /*
  * @brief	Read line(terminated by \n or \0) from file discriptor.
- * @brief	Do not use when you don't need to read all line. It's cause memory leaks.
+ * @brief	Do not use when you don't need to read all line.
+ * 			It's cause memory leaks.
  * @return	char* of line alloced. If fail read or reach end of file, return NULL.
 */
 char	*ft_gnl(int fd);
@@ -121,7 +122,8 @@ char	**split_multichar(const char *s, const char *multichar);
 */
 bool	is_string_composedof(const char *str, const char *charset);
 bool	is_valid_string(char *str, bool condition(char));
-bool	is_valid_matrix(int num_of_row, char *matrix[], bool (*f)(const char *));
+bool	is_valid_matrix(
+			int num_of_row, char *matrix[], bool (*f)(const char *));
 
 /*######################*/
 /*######## Free ########*/
@@ -184,7 +186,10 @@ void	set_radian_within_2pi(double *radian);
 /*################################*/
 /*######## Color, texture ########*/
 /*################################*/
-int	create_trgb_color(unsigned char t, unsigned char r,
-					unsigned char g, unsigned char b);
+int		create_trgb_color(unsigned char t, unsigned char r,
+			unsigned char g, unsigned char b);
+uint8_t	*get_trgb_color(int color, unsigned char *div_color);
+void	get_color_interval(uint32_t from, uint32_t to,
+			double interval, double *color_interval);
 
 #endif
