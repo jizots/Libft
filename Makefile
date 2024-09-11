@@ -1,18 +1,18 @@
-# **************************************************************************** #
+#******************************************************************************#
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sotanaka <sotanaka@student.42.fr>          +#+  +:+       +#+         #
+#    By: hotph <hotph@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 16:31:02 by hotph             #+#    #+#              #
-#    Updated: 2023/10/01 14:13:18 by sotanaka         ###   ########.fr        #
+#    Updated: 2024/09/11 22:33:03 by hotph            ###   ########.fr        #
 #                                                                              #
-# **************************************************************************** #
+#******************************************************************************#
 
 .PHONY: all bonus ex clean fclean re
 
-NAME	=	libsft.a
+NAME	=	libft.a
 CC 		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 CFLAGS	+=	-I./includes
@@ -64,25 +64,34 @@ OBJS = ${addprefix ${OBJS_DIR}, ${SRCS:%.c=%.o}}
 all:	${OBJS_DIR} $(NAME)
 
 ${OBJS_DIR}:
-	mkdir -p ${OBJS_DIR}
+	@mkdir -p ${OBJS_DIR}
 
 ${OBJS_DIR}%.o: ${SRCS_DIR}%.c
-	${CC} ${CFLAGS} -c $< -o $@
+	@${CC} ${CFLAGS} -c $< -o $@
 
 $(NAME):	$(OBJS)
-	ar rcs $@ $^
+	@ar rcs $@ $^
+	@echo "libft.a created"
 
 bonus:
-	${MAKE} WITH_BONUS=1 all
+	@${MAKE} WITH_BONUS=1 all
+	@echo "Bonus added"
 
 ex:
-	${MAKE} WITH_EX=1 all
+	@${MAKE} WITH_EX=1 all
+	@echo "Extra added"
 
 clean:
-	find $(OBJS_DIR) -name "*.o" -type f -exec rm {} +
+	@find $(OBJS_DIR) -name "*.o" -type f -exec rm {} + || true
+	@echo "Objects deleted"
 
 fclean:	clean
-	rm -f $(NAME)
-	rmdir ${OBJS_DIR} 2>/dev/null || true
+	@rm -f $(NAME) & echo "libft.a deleted"
+	@rm -f a.out & echo "a.out deleted"
+	@rmdir ${OBJS_DIR} 2>/dev/null || true
 
 re: fclean all
+
+exec: ex
+	@${CC} ${CFLAGS} -L. -lft main.c -o a.out
+	@echo "a.out created"

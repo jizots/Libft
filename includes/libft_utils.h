@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libsft_utils.h                                     :+:      :+:    :+:   */
+/*   libft_utils.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,7 +17,7 @@
 # endif
 
 /*-------include header-------*/
-# include "libsft.h"
+# include "libft.h"
 # include <math.h>
 # include <stdbool.h>
 

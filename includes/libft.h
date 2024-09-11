@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libsft.h                                           :+:      :+:    :+:   */
+/*   libft.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hotph <hotph@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -20,7 +20,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <limits.h>
-# include "libsft_utils.h"
+# include "libft_utils.h"
 
 /*-------define-------*/
 # define WHITE_SPACE " \f\n\r\t\v"

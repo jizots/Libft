@@ -1,5 +1,5 @@
 *.json
-libsft.code-workspace
+libft.code-workspace
 a.out
 .DS_Store
 c_cpp_propeties.json
@@ -7,4 +7,3 @@ c_cpp_propeties.json
 .vscode/c_cpp_properties.json
 *.o
 libft.a
-libsft.a
